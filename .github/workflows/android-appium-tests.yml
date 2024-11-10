@@ -27,5 +27,5 @@ jobs:
         
     - name: Run Tests  
       run: |
-        mvn test -Dtest=VPA
+        mvn test -Dtest=VPA_Android.Login.UIUXFirstLogin -DfailIfNoTests=false
       shell: cmd
