@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="VPA Android Test Suite">
-    <parameter name="project" value="VPA"/>
-
-    <listeners>
-        <listener class-name="listeners.ExtentReportListener"/>
-    </listeners>
-
-    <test name="VPA Login Tests">
-        <packages>
-            <package name="VPA_Android.Login"/>
-        </packages>
+<suite name="VPA Android Tests">
+    <test name="Login Tests">
+        <classes>
+            <class name="VPA_Android.Login.UIUXFirstLogin"/>
+        </classes>
     </test>
 </suite>
