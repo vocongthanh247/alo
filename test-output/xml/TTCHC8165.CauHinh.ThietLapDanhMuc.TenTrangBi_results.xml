@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ThietLapDanhMuc"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="15.410">
+    <properties></properties>
+
+
+
+            <testcase
+                name="testFullTenTrangBi"
+                time="15.410"
+                classname="TTCHC8165.CauHinh.ThietLapDanhMuc.TenTrangBi">
+            </testcase>
+</testsuite>

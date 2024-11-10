@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="VPA Login Tests"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="25.315">
+    <properties></properties>
+
+
+
+            <testcase
+                name="testFirstLogin"
+                time="25.315"
+                classname="VPA_Android.Login.UIUXFirstLogin">
+            </testcase>
+</testsuite>

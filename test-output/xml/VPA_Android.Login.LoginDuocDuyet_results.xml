@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alo"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="161.470">
+    <properties></properties>
+
+
+
+            <testcase
+                name="loginMSTDuocDuyetToChuc"
+                time="161.470"
+                classname="VPA_Android.Login.LoginDuocDuyet">
+            </testcase>
+</testsuite>

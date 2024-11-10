@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alo"
+           tests="3"
+           failures="1"
+           errors="0"
+           skipped="2"
+           time="21.069">
+    <properties></properties>
+
+            <testcase
+                name="setUp"
+                time="21.069"
+                classname="VneCSGT.XuLyVPGT.qdxpkdbb">
+
+            <failure type="io.appium.java_client.service.local.AppiumServerHasNotBeenStartedLocallyException" message="[The local appium server has not been started, Reason: Timed out waiting for [http://127.0.0.1:4723/status] to be available after 20015 ms, Consider increasing the server startup timeout value (currently 20000ms), Node.js executable path: C:\Program Files\nodejs\node.exe, Arguments: [C:\Users\Admin\AppData\Roaming\npm\node_modules\appium\build\lib\main.js, --port, 4723, --address, 0.0.0.0], Output: [38;5;112m[Appium][0m Welcome to Appium v2.12.1
+[38;5;112m[Appium][0m The autodetected Appium home path: C:\Users\Admin\.appium
+[38;5;112m[Appium][0m Attempting to load driver uiautomator2...
+[38;5;112m[Appium][0m Requiring driver at C:\Users\Admin\.appium\node_modules\appium-uiautomator2-driver\build\index.js
+[38;5;112m[Appium][0m AndroidUiautomator2Driver has been successfully loaded in 2.244s
+[38;5;86m[HTTP][0m Could not start REST http interface listener. The requested port may already be in use. Please make sure there is no other instance of this server running already.
+[38;5;112m[Appium][0m Could not configure Appium server. It&apos;s possible that a driver or plugin tried to update the server and failed. Original error: listen EADDRINUSE: address already in use 0.0.0.0:4723
+[38;5;112m[Appium][0m Error: listen EADDRINUSE: address already in use 0.0.0.0:4723
+    at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+    at listenInCluster (node:net:1961:12)
+    at doListen (node:net:2135:7)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+]">
+                <![CDATA[io.appium.java_client.service.local.AppiumServerHasNotBeenStartedLocallyException: [The local appium server has not been started, Reason: Timed out waiting for [http://127.0.0.1:4723/status] to be available after 20015 ms, Consider increasing the server startup timeout value (currently 20000ms), Node.js executable path: C:\Program Files\nodejs\node.exe, Arguments: [C:\Users\Admin\AppData\Roaming\npm\node_modules\appium\build\lib\main.js, --port, 4723, --address, 0.0.0.0], Output: [38;5;112m[Appium][0m Welcome to Appium v2.12.1
+[38;5;112m[Appium][0m The autodetected Appium home path: C:\Users\Admin\.appium
+[38;5;112m[Appium][0m Attempting to load driver uiautomator2...
+[38;5;112m[Appium][0m Requiring driver at C:\Users\Admin\.appium\node_modules\appium-uiautomator2-driver\build\index.js
+[38;5;112m[Appium][0m AndroidUiautomator2Driver has been successfully loaded in 2.244s
+[38;5;86m[HTTP][0m Could not start REST http interface listener. The requested port may already be in use. Please make sure there is no other instance of this server running already.
+[38;5;112m[Appium][0m Could not configure Appium server. It's possible that a driver or plugin tried to update the server and failed. Original error: listen EADDRINUSE: address already in use 0.0.0.0:4723
+[38;5;112m[Appium][0m Error: listen EADDRINUSE: address already in use 0.0.0.0:4723
+    at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+    at listenInCluster (node:net:1961:12)
+    at doListen (node:net:2135:7)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+]
+                io.appium.java_client.service.local.AppiumDriverLocalService.start(AppiumDriverLocalService.java:202)VneCSGT.XuLyVPGT.qdxpkdbb.setUp(qdxpkdbb.java:37)java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)java.base/java.lang.reflect.Method.invoke(Method.java:580)org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)java.base/java.util.ArrayList.forEach(ArrayList.java:1597)org.testng.TestRunner.privateRun(TestRunner.java:829)org.testng.TestRunner.run(TestRunner.java:602)org.testng.SuiteRunner.runTest(SuiteRunner.java:437)org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)org.testng.SuiteRunner.run(SuiteRunner.java:330)org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)org.testng.TestNG.runSuitesLocally(TestNG.java:1176)org.testng.TestNG.runSuites(TestNG.java:1099)org.testng.TestNG.run(TestNG.java:1067)com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+                    Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://127.0.0.1:4723/status] to be available after 20015 ms
+                    org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:94)io.appium.java_client.service.local.AppiumDriverLocalService.ping(AppiumDriverLocalService.java:157)io.appium.java_client.service.local.AppiumDriverLocalService.start(AppiumDriverLocalService.java:181)VneCSGT.XuLyVPGT.qdxpkdbb.setUp(qdxpkdbb.java:37)java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)java.base/java.lang.reflect.Method.invoke(Method.java:580)org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)java.base/java.util.ArrayList.forEach(ArrayList.java:1597)org.testng.TestRunner.privateRun(TestRunner.java:829)org.testng.TestRunner.run(TestRunner.java:602)org.testng.SuiteRunner.runTest(SuiteRunner.java:437)org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)org.testng.SuiteRunner.run(SuiteRunner.java:330)org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)org.testng.TestNG.runSuitesLocally(TestNG.java:1176)org.testng.TestNG.runSuites(TestNG.java:1099)org.testng.TestNG.run(TestNG.java:1067)com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+                                    Caused by: java.util.concurrent.TimeoutException
+                    java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:91)io.appium.java_client.service.local.AppiumDriverLocalService.ping(AppiumDriverLocalService.java:157)io.appium.java_client.service.local.AppiumDriverLocalService.start(AppiumDriverLocalService.java:181)VneCSGT.XuLyVPGT.qdxpkdbb.setUp(qdxpkdbb.java:37)java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)java.base/java.lang.reflect.Method.invoke(Method.java:580)org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)java.base/java.util.ArrayList.forEach(ArrayList.java:1597)org.testng.TestRunner.privateRun(TestRunner.java:829)org.testng.TestRunner.run(TestRunner.java:602)org.testng.SuiteRunner.runTest(SuiteRunner.java:437)org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)org.testng.SuiteRunner.run(SuiteRunner.java:330)org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)org.testng.TestNG.runSuitesLocally(TestNG.java:1176)org.testng.TestNG.runSuites(TestNG.java:1099)org.testng.TestNG.run(TestNG.java:1067)com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+                ]]>
+            </failure>
+    </testcase>
+
+            <testcase
+                name="tearDown"
+                time="0.0"
+                classname="VneCSGT.XuLyVPGT.qdxpkdbb">
+            </testcase>
+            <testcase
+                name="edit"
+                time="0.0"
+                classname="VneCSGT.XuLyVPGT.qdxpkdbb">
+            </testcase>
+
+</testsuite>

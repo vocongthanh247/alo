@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ComparePhuongTien"
+           tests="1"
+           failures="1"
+           errors="0"
+           skipped="0"
+           time="176.191">
+    <properties></properties>
+
+            <testcase
+                name="VehicleCountComparison"
+                time="176.191"
+                classname="TTCHC8165.Compare.VehicleCountComparison">
+
+            <failure type="com.microsoft.playwright.PlaywrightException" message="Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;Error
+  stack=&apos;Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\Admin\AppData\Local\Temp\playwright-java-13963077510394673077\package\lib\server\dispatchers\dispatcher.js:227:49)
+    at transport.onmessage (C:\Users\Admin\AppData\Local\Temp\playwright-java-13963077510394673077\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\Admin\AppData\Local\Temp\playwright-java-13963077510394673077\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:476:21)
+}">
+                <![CDATA[com.microsoft.playwright.PlaywrightException: Error {
+  message='Target page, context or browser has been closed
+  name='Error
+  stack='Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\Admin\AppData\Local\Temp\playwright-java-13963077510394673077\package\lib\server\dispatchers\dispatcher.js:227:49)
+    at transport.onmessage (C:\Users\Admin\AppData\Local\Temp\playwright-java-13963077510394673077\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\Admin\AppData\Local\Temp\playwright-java-13963077510394673077\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:476:21)
+}
+                com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:126)com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)com.microsoft.playwright.impl.FrameImpl.querySelectorAllImpl(FrameImpl.java:125)com.microsoft.playwright.impl.PageImpl.lambda$querySelectorAll$8(PageImpl.java:514)com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)com.microsoft.playwright.impl.PageImpl.querySelectorAll(PageImpl.java:514)TTCHC8165.ChiHuyGiaoThong.BanDoPhuongTien.VehicleStatisticsTest.getVehicles(VehicleStatisticsTest.java:56)TTCHC8165.ChiHuyGiaoThong.BanDoPhuongTien.VehicleStatisticsTest.getVehicleCounts(VehicleStatisticsTest.java:115)TTCHC8165.Compare.VehicleCountComparison.VehicleCountComparison(VehicleCountComparison.java:20)java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)java.base/java.lang.reflect.Method.invoke(Method.java:580)org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)java.base/java.util.ArrayList.forEach(ArrayList.java:1597)org.testng.TestRunner.privateRun(TestRunner.java:829)org.testng.TestRunner.run(TestRunner.java:602)org.testng.SuiteRunner.runTest(SuiteRunner.java:437)org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)org.testng.SuiteRunner.run(SuiteRunner.java:330)org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)org.testng.TestNG.runSuitesLocally(TestNG.java:1176)org.testng.TestNG.runSuites(TestNG.java:1099)org.testng.TestNG.run(TestNG.java:1067)com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+                    Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message='Target page, context or browser has been closed
+  name='Error
+  stack='Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\Admin\AppData\Local\Temp\playwright-java-13963077510394673077\package\lib\server\dispatchers\dispatcher.js:227:49)
+    at transport.onmessage (C:\Users\Admin\AppData\Local\Temp\playwright-java-13963077510394673077\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\Admin\AppData\Local\Temp\playwright-java-13963077510394673077\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:476:21)
+}
+                    com.microsoft.playwright.impl.Connection.dispatch(Connection.java:226)com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:206)com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:126)com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)com.microsoft.playwright.impl.FrameImpl.querySelectorAllImpl(FrameImpl.java:125)com.microsoft.playwright.impl.PageImpl.lambda$querySelectorAll$8(PageImpl.java:514)com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)com.microsoft.playwright.impl.PageImpl.querySelectorAll(PageImpl.java:514)TTCHC8165.ChiHuyGiaoThong.BanDoPhuongTien.VehicleStatisticsTest.getVehicles(VehicleStatisticsTest.java:56)TTCHC8165.ChiHuyGiaoThong.BanDoPhuongTien.VehicleStatisticsTest.getVehicleCounts(VehicleStatisticsTest.java:115)TTCHC8165.Compare.VehicleCountComparison.VehicleCountComparison(VehicleCountComparison.java:20)java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)java.base/java.lang.reflect.Method.invoke(Method.java:580)org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)java.base/java.util.ArrayList.forEach(ArrayList.java:1597)org.testng.TestRunner.privateRun(TestRunner.java:829)org.testng.TestRunner.run(TestRunner.java:602)org.testng.SuiteRunner.runTest(SuiteRunner.java:437)org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)org.testng.SuiteRunner.run(SuiteRunner.java:330)org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)org.testng.TestNG.runSuitesLocally(TestNG.java:1176)org.testng.TestNG.runSuites(TestNG.java:1099)org.testng.TestNG.run(TestNG.java:1067)com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+                ]]>
+            </failure>
+    </testcase>
+
+
+</testsuite>
