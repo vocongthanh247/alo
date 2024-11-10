@@ -7,7 +7,7 @@ on:
 
 jobs:
   test:
-    runs-on: self-hosted    # Chỉ định chạy trên self-hosted runner
+    runs-on: self-hosted
     
     steps:
     - uses: actions/checkout@v3
@@ -17,6 +17,18 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
+
+    - name: Check Android Device
+      run: |
+        adb devices
+        adb shell getprop ro.build.version.release
+        
+    - name: Start Appium Server
+      run: |
+        npm install -g appium
+        appium driver install uiautomator2
+        start /B appium
+        timeout /t 10 /nobreak
         
     - name: Run Tests
       run: mvn clean test -DsuiteXmlFile=testng.xml
