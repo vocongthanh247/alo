@@ -1,21 +1,28 @@
-name: Android Appium Tests
+name: Java CI with Maven
+
 on:
   push:
-    branches: [ master ]
-  workflow_dispatch:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 
 jobs:
-  test:
-    runs-on: self-hosted
+  build:
+    runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Set up JDK 17
-        uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'temurin'
-
-      - name: Run Tests
-        run: mvn test
+    - uses: actions/checkout@v3
+    
+    - name: Set up JDK 23
+      uses: actions/setup-java@v3
+      with:
+        java-version: '23'
+        distribution: 'oracle'
+        
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+        
+    - name: Run Tests  
+      run: |
+        "D:\O c\jdk-23\bin\java.exe" -ea -Didea.test.cyclic.buffer.size=1048576 "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2024.2.3\lib\idea_rt.jar=51710:C:\Program Files\JetBrains\IntelliJ IDEA 2024.2.3\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "C:\Program Files\JetBrains\IntelliJ IDEA 2024.2.3\lib\idea_rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2024.2.3\plugins\testng\lib\testng-rt.jar;target\test-classes;target\classes;C:\Users\Admin\.m2\repository\org\seleniumhq\selenium\selenium-java\4.11.0\selenium-java-4.11.0.jar" com.intellij.rt.testng.RemoteTestNGStarter -usedefaultlisteners false -socket51709 @w@C:\Users\Admin\AppData\Local\Temp\idea_working_dirs_testng.tmp -temp C:\Users\Admin\AppData\Local\Temp\idea_testng.tmp
+      shell: cmd
