@@ -2,14 +2,12 @@ name: Android Appium Tests
 
 on:
   push:
-    branches: [ master ]  # Đổi main thành master
-  pull_request:
-    branches: [ master ]  # Đổi main thành master
-  workflow_dispatch:      # Thêm để có thể chạy manual
+    branches: [ master ]
+  workflow_dispatch:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted    # Chỉ định chạy trên self-hosted runner
     
     steps:
     - uses: actions/checkout@v3
@@ -19,12 +17,6 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: 'maven'
         
-    - name: Clean Maven Cache
-      run: |
-        rm -rf ~/.m2/repository/org/seleniumhq/selenium/
-        rm -rf ~/.m2/repository/io/appium/
-        
-    - name: Build with Maven
-      run: mvn clean test
+    - name: Run Tests
+      run: mvn clean test -DsuiteXmlFile=testng.xml
