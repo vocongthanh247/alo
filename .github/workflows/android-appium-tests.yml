@@ -2,55 +2,14 @@ name: Android Appium Tests
 
 on:
   push:
-    branches: [ master ]  # Đổi main thành master
+    branches: [ master ]
   pull_request:
-    branches: [ master ]  # Đổi main thành master
-  workflow_dispatch:      # Thêm để có thể chạy manual
+    branches: [ master ]
+  workflow_dispatch:    # Quan trọng: phải có dòng này
 
 jobs:
   test:
     runs-on: ubuntu-latest
-<<<<<<< HEAD
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up JDK 23
-        uses: actions/setup-java@v4
-        with:
-          java-version: '23'
-          distribution: 'temurin'
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install Appium and Dependencies
-        run: |
-          npm install -g appium
-          appium driver install uiautomator2
-
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-        env:
-          SKIP_JDK_VERSION_CHECK: true
-
-      - name: Build with Maven
-        run: mvn -B package --file pom.xml
-
-      - name: Run Tests
-        run: mvn test
-
-      - name: Upload Test Results
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-results
-          path: |
-            target/surefire-reports/
-            target/site/
-=======
     
     steps:
     - uses: actions/checkout@v3
@@ -62,11 +21,5 @@ jobs:
         distribution: 'temurin'
         cache: 'maven'
         
-    - name: Clean Maven Cache
-      run: |
-        rm -rf ~/.m2/repository/org/seleniumhq/selenium/
-        rm -rf ~/.m2/repository/io/appium/
-        
     - name: Build with Maven
       run: mvn clean test
->>>>>>> f47fc6c03840ac98c426c56761edcca12735ec8d
