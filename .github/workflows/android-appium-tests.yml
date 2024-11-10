@@ -2,9 +2,10 @@ name: Android Appium Tests
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]  # Đổi main thành master
   pull_request:
-    branches: [ main ]
+    branches: [ master ]  # Đổi main thành master
+  workflow_dispatch:      # Thêm để có thể chạy manual
 
 jobs:
   test:
