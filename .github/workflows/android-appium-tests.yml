@@ -20,4 +20,5 @@ jobs:
 
       - name: Run Tests
         shell: cmd
-        run: mvn clean test -DsuiteXmlFile=testng.xml
+        run: |
+          C:\apache-maven-3.9.9\bin\mvn clean test -DsuiteXmlFile=testng.xml
