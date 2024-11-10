@@ -1,13 +1,16 @@
 name: Android Appium Tests
 
 on:
-  schedule:
-    - cron: '5 10 * * *'  # 10:05 UTC = 17:05 GMT+7
-  workflow_dispatch:      # Cho phép chạy thủ công
+  push:
+    branches: [ master ]  # Đổi main thành master
+  pull_request:
+    branches: [ master ]  # Đổi main thành master
+  workflow_dispatch:      # Thêm để có thể chạy manual
 
 jobs:
   test:
     runs-on: ubuntu-latest
+<<<<<<< HEAD
 
     steps:
       - uses: actions/checkout@v4
@@ -47,3 +50,23 @@ jobs:
           path: |
             target/surefire-reports/
             target/site/
+=======
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: 'maven'
+        
+    - name: Clean Maven Cache
+      run: |
+        rm -rf ~/.m2/repository/org/seleniumhq/selenium/
+        rm -rf ~/.m2/repository/io/appium/
+        
+    - name: Build with Maven
+      run: mvn clean test
+>>>>>>> f47fc6c03840ac98c426c56761edcca12735ec8d
