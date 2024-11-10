@@ -19,6 +19,6 @@ jobs:
           distribution: 'temurin'
 
       - name: Run Tests
-        shell: cmd
+        shell: powershell
         run: |
-          C:\apache-maven-3.9.9\bin\mvn clean test -DsuiteXmlFile=testng.xml
+          & 'C:\apache-maven-3.9.9\bin\mvn.cmd' clean test -DsuiteXmlFile=testng.xml
