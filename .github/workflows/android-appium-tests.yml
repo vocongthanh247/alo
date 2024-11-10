@@ -18,12 +18,10 @@ jobs:
           distribution: 'temurin'
 
       - name: Compile and Get Dependencies
-        shell: cmd
         run: |
-          "C:\apache-maven-3.9.9\bin\mvn.cmd" dependency:copy-dependencies -DoutputDirectory=target/dependencies
-          "C:\apache-maven-3.9.9\bin\mvn.cmd" compiler:compile compiler:testCompile
+          C:\Windows\System32\cmd.exe /c "C:\apache-maven-3.9.9\bin\mvn.cmd" dependency:copy-dependencies -DoutputDirectory=target/dependencies
+          C:\Windows\System32\cmd.exe /c "C:\apache-maven-3.9.9\bin\mvn.cmd" compiler:compile compiler:testCompile
 
       - name: Run Tests
-        shell: cmd
         run: |
-          java -cp "target/test-classes;target/classes;target/dependencies/*" org.testng.TestNG testng.xml
+          C:\Windows\System32\cmd.exe /c java -cp "target/test-classes;target/classes;target/dependencies/*" org.testng.TestNG testng.xml
